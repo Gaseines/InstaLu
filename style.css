@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'insta';
+    src: url(./fonts/Billabong.otf);
+}
+
+
+
+body{
+    
+    background-color: black;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+#logo{
+    color: white;
+    font-size: 1.3em;
+
+    font-family: 'insta', serif;
+}
+
+#icons{
+    width: 100vw;
+    text-align: right;
+}
+.msg,.heart{
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+
