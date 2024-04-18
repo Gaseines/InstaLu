@@ -10,6 +10,11 @@ body{
     background-color: black;
 }
 
+#all{
+    margin: auto;
+    max-width: 430px;
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -31,4 +36,37 @@ header{
     margin-right: 10px;
 }
 
+.divStory{
+    background-color: black;
+}
 
+.storyContainer {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    background-color: black;
+    
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+}
+
+.storyContainer::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome, Safari e outros navegadores WebKit */
+}
+
+.story {
+    flex: 0 0 auto; /* Impede que os stories estiquem ou encolham */
+    width: 75px; /* Largura fixa para cada story */
+    height: 75px; /* Altura fixa para cada story */
+    margin-right: 10px; /* Espaçamento entre cada story */
+    background-color: #f8f8f8;
+    text-align: center;
+    line-height: 75px; /* Centraliza o texto verticalmente */
+    border-radius: 50%; /* Torna a div circular */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+  
