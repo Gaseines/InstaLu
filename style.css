@@ -45,7 +45,7 @@ header{
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    padding: 10px 0;
+    padding: 10px 0 0px 0px;
     background-color: black;
     
     scrollbar-width: none; /* Para Firefox */
@@ -59,21 +59,34 @@ header{
 
 .story {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 0 0 auto; /* Impede que os stories estiquem ou encolham */
-    width: 78.5px; /* Largura fixa para cada story */
-    height: 78.5px; /* Altura fixa para cada story */
-    margin-right: 10px; /* Espaçamento entre cada story */
+    width: 83px; /* Largura fixa para cada story */
+    height: 83px; /* Altura fixa para cada story */
+    margin-right: 10px;
+    margin-bottom: 20px; /* Espaçamento entre cada story */
     background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
     text-align: center;
     line-height: 75px; /* Centraliza o texto verticalmente */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     cursor: pointer;
-    
+    position: relative;
     
     border-radius: 50%; /* Assegura que a borda seja completamente arredondada */
     
+}
+
+.storyTxt{
+    font-family: sans-serif;
+    text-align: justify;
+    color: white;
+    font-size: 12px; /* Tamanho do texto */
+    margin-top: 5px; /* Espaço entre a imagem e o texto */
+    height: 90px;
+    position: absolute;
+    top: 53px;
 }
 
 
@@ -83,6 +96,7 @@ header{
     width: 75px;
     height: 75px; /* Largura fixa para cada story */
     border-radius: 50%;
+    border: 2px solid black;
     
 }
 
@@ -109,5 +123,49 @@ header{
     border: 1px solid black;
     
 }
+
+.feedContainer{
+    display: flex;
+    height: 100%;
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 0.1px solid rgba(128, 128, 128, 0.267);
+    
+}
+
+.feedBordaImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px; /* Largura fixa para cada story */
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+.dados{
+    display: flex;
+
+}
+
+.dadoImg{
+    object-fit: cover;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px; /* Largura fixa para cada story */
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.arroba{
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    padding-left: 8px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+
 
   
