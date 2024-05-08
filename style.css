@@ -6,7 +6,7 @@
 
 
 body{
-    
+    margin: 0;
     background-color: black;
 }
 
@@ -23,7 +23,7 @@ header{
 #logo{
     color: white;
     font-size: 1.3em;
-
+    margin-left: 10px;
     font-family: 'insta', serif;
 }
 
@@ -37,11 +37,13 @@ header{
 }
 
 .divStory{
+    
     background-color: black;
 }
 
 .storyContainer {
     display: flex;
+    margin-left: 10px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -126,6 +128,8 @@ header{
 
 .feedContainer{
     display: flex;
+    flex-direction: column;
+    width: 100%;
     height: 100%;
     margin-top: 10px;
     padding-top: 5px;
@@ -143,9 +147,15 @@ header{
     background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
 }
 
-.dados{
-    display: flex;
+.post{
+    width: 100%;
+}
 
+.dados{
+    width: 100%;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
 }
 
 .dadoImg{
@@ -166,6 +176,94 @@ header{
     text-align: center;
 }
 
+.tresp{
+    width: 15px;
+    height: 15px;
+    margin-left: auto;
+    margin-right: 15px;
+}
 
+.feedFoto{
+    width: 100%;
+}
 
+.foto{
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+}
+
+.iconesPostContainer{
+    display: flex;
+    width: 100%;
+}
+
+.iconPost1{
+    margin: 2px 8px 5px 10px;
+    width: 23px;
+}
+
+.iconesPost{
+    cursor: pointer;
+    margin: 2px 8px 5px 5px;
+    width: 23px;
+}
+
+.iconePost4{
+    margin-left: auto;
+    margin-right: 15px;
+    width: 23px;
+}
+
+.curtidas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.imgCurtidas{
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.txtCurtidas{
+    color: white;
+    font-family: sans-serif;
+    
+    font-size: 0.8em;
+}
+
+.comentarios{
+    color: gray;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.dataContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.data{
+    color: gray;
+    font-family: sans-serif;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin: 0px 0px 20px 10px;
+}
+
+.traducao{
+    color: white;
+    
+    font-family: sans-serif;
+    font-size: 0.7em;
+    
+    margin: 0px 0px 20px 5px;
+}
   
