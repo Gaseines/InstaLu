@@ -1,17 +1,34 @@
-body, html{
-    overflow: hidden;
+/* Reseta o estilo padrão para evitar margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container_video_story{
+/* Garante que não haja rolagem no corpo e HTML */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita rolagem */
+}
+
+/* Estiliza o contêiner do vídeo */
+.container_video_story {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Garante que não há overflow */
     display: flex;
+
     align-items: center;
+    background-color: black; /* Para evitar bordas pretas */
     flex-direction: column;
     color: white;
-
-    overflow: hidden;
+    max-width: 430px;
 }
 
-.load{
+/* Estiliza a barra de carregamento */
+.load {
     position: relative;
     width: 96%;
     height: 1.5px;
@@ -21,53 +38,38 @@ body, html{
     z-index: 2;
 }
 
-.load::before{
+.load::before {
     content: '';
     width: 0%;
     height: 1.5px;
     background-color: rgb(175, 175, 175);
     position: absolute;
-
     animation: load 18s linear forwards;
     z-index: 2;
 }
 
-.bordaImg{
+.bordaImg {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 45px;
     height: 45px; /* Largura fixa para cada story */
     border-radius: 50%;
-    
-    
 }
 
-
-.video_padrao{
-    margin: auto;
-    max-width: 430px;
-    
-    
+.video_padrao {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cobre toda a área */
     position: absolute;
     z-index: 1;
 }
 
-
-
-
-
-@keyframes load{
-    0%{
+@keyframes load {
+    0% {
         width: 0%;
     }
-    100%{
-        width: 100%
+    100% {
+        width: 100%;
     }
 }
-
-
-
-
-
-

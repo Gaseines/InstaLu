@@ -7,9 +7,11 @@
 
 
 
-body{
-    margin: 0;
+body, html{
+    margin: auto;
     background-color: black;
+    max-width: 430px;
+    overflow: hidden;
 }
 
 #all{
