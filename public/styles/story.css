@@ -1,0 +1,116 @@
+.divStory{
+    
+    background-color: black;
+}
+
+.storyContainer {
+    display: flex;
+    margin-left: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 10px 0 0px 0px;
+    background-color: black;
+    
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+    -webkit-overflow-scrolling: touch;
+}
+
+.storyContainer::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome, Safari e outros navegadores WebKit */
+}
+
+.story {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto; /* Impede que os stories estiquem ou encolham */
+    width: 83px; /* Largura fixa para cada story */
+    height: 83px; /* Altura fixa para cada story */
+    margin-right: 10px;
+    margin-bottom: 20px; /* Espaçamento entre cada story */
+    background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    text-align: center;
+    line-height: 75px; /* Centraliza o texto verticalmente */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    
+    
+    border-radius: 50%; /* Assegura que a borda seja completamente arredondada */
+    
+}
+
+.storyTxt{
+    font-family: sans-serif;
+    text-align: justify;
+    color: white;
+    font-size: 12px; /* Tamanho do texto */
+    margin-top: 5px; /* Espaço entre a imagem e o texto */
+    height: 90px;
+    position: absolute;
+    top: 53px;
+}
+
+
+.storyImg{
+    object-fit: cover;
+    flex: 0 0 auto;
+    width: 75px;
+    height: 75px; /* Largura fixa para cada story */
+    border-radius: 50%;
+    border: 2px solid black;
+    
+}
+
+.myStory{
+    width: 74px; /* Largura fixa para cada story */
+    height: 74px; /* Altura fixa para cada story */
+    position: relative;
+    border: none;
+}
+.myStory::after{
+    position: absolute;
+    content: "+";
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 75%;
+    left: 73%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0893ee;
+    border: 1px solid black;
+    
+}
+
+.black_box{
+    background-color: black;
+    width: 0px;
+    height: 0px;
+
+    position: absolute;
+    
+}
+
+.black_box_open{
+    animation: open 0.2s linear forwards;
+}
+
+
+@keyframes open{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+
+    }
+}
