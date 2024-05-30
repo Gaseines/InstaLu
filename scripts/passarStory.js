@@ -54,3 +54,14 @@ document.addEventListener('DOMContentLoaded', (event) =>{
     })
 
 })
+
+//Home
+document.addEventListener('DOMContentLoaded', (event) =>{
+     const homes = document.querySelectorAll('.home')
+
+     homes.forEach(home => {
+        home.addEventListener('click', () => {
+            window.location.href = '../index.html'
+         })
+     })
+})
