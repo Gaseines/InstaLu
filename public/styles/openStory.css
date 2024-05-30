@@ -63,6 +63,34 @@ body, html {
     object-fit: cover; /* Garante que o vídeo cobre toda a área */
     position: absolute;
     z-index: 1;
+    background-color: wheat;
+
+    right: 0;
+    left: 0%;
+}
+
+.btnNext{
+    background-color: transparent;
+    width: 50px;
+    height: 100%;
+    left: 88.5%;
+    top: 70px;
+    z-index: 2;
+    position: absolute;
+
+    cursor: pointer;
+}
+
+.btnBack{
+    background-color: transparent;
+    width: 50px;
+    height: 100%;
+    left: 0%;
+    top: 70px;
+    z-index: 2;
+    position: absolute;
+
+    cursor: pointer;
 }
 
 @keyframes load {
@@ -72,4 +100,29 @@ body, html {
     100% {
         width: 100%;
     }
+}
+
+@keyframes next{
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 30%;
+    }
+}
+.aniNext{
+    animation: next linear 0.3s forwards
+}
+
+
+@keyframes nextAjuste{
+    0%{
+        opacity: 30%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.aniNextAjuste{
+    animation: nextAjuste linear 0.3s forwards
 }
