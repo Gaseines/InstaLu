@@ -37,3 +37,21 @@ v2.addEventListener('click', () => {
     }, 800)
 })
 
+//Abertura Story 3
+v3.addEventListener('click', () => {
+    let black = document.querySelector('#black3')
+    
+
+    black.classList.add('black_box_open')
+
+    setTimeout(() =>{
+        window.location.href = './pages/video01.html'
+    }, 170)
+
+    setTimeout(() => {
+        black.classList.remove('black_box_open')
+    }, 800)
+})
+
+
+

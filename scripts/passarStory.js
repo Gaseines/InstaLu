@@ -1,11 +1,16 @@
 
 //Passar Story
+
+
 document.addEventListener('DOMContentLoaded', (event) =>{
     let v1 = document.querySelector(".storyVideo1")
     let v2 = document.querySelector(".storyVideo2")
+    let v3 = document.querySelector(".storyVideo3")
+    let v4 = document.querySelector(".storyVideo4")
 
     const nexts = document.querySelectorAll('.btnNext')
 
+//Do story 1 para o 2
     nexts.forEach(next => {
         next.addEventListener('click', () => {
             if(next.classList.contains('next1')){
@@ -19,21 +24,44 @@ document.addEventListener('DOMContentLoaded', (event) =>{
                 }, 250)
 
                 
-            }else{
-                alert('deu errado')
+            }
+        })
+    })
+
+//Do story 2 para o 3
+    nexts.forEach(next => {
+        next.addEventListener('click', () => {
+            if(next.classList.contains('next2')){
+                v2.classList.remove('aniNextAjuste')
+                v2.classList.add('aniNext')
+            
+                setTimeout(() => {
+                    window.location.href = '../pages/video03.html'
+                    v2.classList.remove('aniNext')
+                
+                }, 250)
+
+            
             }
         })
     })
 
 })
 
+
+
+
+
 //Voltar Story
+
+
 document.addEventListener('DOMContentLoaded', (event) =>{
     let v1 = document.querySelector(".storyVideo1")
     let v2 = document.querySelector(".storyVideo2")
 
     const backs = document.querySelectorAll('.btnBack')
 
+//Do story 2 para o 1
     backs.forEach(back => {
         back.addEventListener('click', () => {
             if(back.classList.contains('back2')){
@@ -42,13 +70,29 @@ document.addEventListener('DOMContentLoaded', (event) =>{
                 
                 setTimeout(() => {
                     window.location.href = '../pages/video01.html'
-                    v1.classList.remove('aniNext')
+                    v2.classList.remove('aniNext')
                     
                 }, 250)
 
                 
-            }else{
-                alert('deu errado')
+            }
+        })
+    })
+
+//Do story 3 para o 2
+    backs.forEach(back => {
+        back.addEventListener('click', () => {
+            if(back.classList.contains('back3')){
+                v3.classList.remove('aniNextAjuste')
+                v3.classList.add('aniNext')
+                
+                setTimeout(() => {
+                    window.location.href = '../pages/video02.html'
+                    v3.classList.remove('aniNext')
+                    
+                }, 250)
+
+                
             }
         })
     })
@@ -58,10 +102,95 @@ document.addEventListener('DOMContentLoaded', (event) =>{
 //Home
 document.addEventListener('DOMContentLoaded', (event) =>{
      const homes = document.querySelectorAll('.home')
+     const videos = document.querySelectorAll('.container_video_story')
 
+//Clicando
      homes.forEach(home => {
         home.addEventListener('click', () => {
             window.location.href = '../index.html'
          })
      })
+
 })
+
+
+//Passar e Voltar Story deslizando
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('#all')
+    const v1 = document.querySelector(".container_video1")
+    const v2 = document.querySelector(".container_video2")
+    const v3 = document.querySelector(".container_video3")
+    const v4 = document.querySelector(".container_video4")
+
+    let touchstartX = 0;
+    let touchendX = 0;
+
+
+    function deslizeProximo() { 
+//Passando  
+if (touchendX < touchstartX) {
+    //Do story 1 para o 2 
+    if (container.classList.contains('container_video1')) {
+        container.classList.add('aniNext');
+        setTimeout(() => {
+            window.location.href = '../pages/video02.html';
+        }, 250);
+    //Do story 2 para o 3
+    } else if (container.classList.contains('container_video2')) {
+        container.classList.add('aniNext');
+        setTimeout(() => {
+            window.location.href = '../pages/video03.html';
+        }, 250);
+    //Do story 3 para o 4 
+    } else if (container.classList.contains('container_video3')) {
+        container.classList.add('aniNext');
+        setTimeout(() => {
+            window.location.href = '../pages/video04.html';
+        }, 250);
+    }
+
+//Voltando
+} else if (touchendX > touchstartX) {
+    //Do story 2 para o 1 
+    if (container.classList.contains('container_video2')) {
+        container.classList.add('aniNextAjuste');
+        setTimeout(() => {
+            window.location.href = '../pages/video01.html';
+        }, 250);
+    //Do story 3 para o 2 
+    } else if (container.classList.contains('container_video3')) {
+        container.classList.add('aniNextAjuste');
+        setTimeout(() => {
+            window.location.href = '../pages/video02.html';
+        }, 250);
+    //Do story 4 para o 3 
+    } else if (container.classList.contains('container_video4')) {
+        container.classList.add('aniNextAjuste');
+        setTimeout(() => {
+            window.location.href = '../pages/video03.html';
+        }, 250);
+    }
+}
+}
+
+
+//Eventos Passar
+
+//Story 01
+    container.addEventListener('touchstart', (event) => {
+        touchstartX = event.changedTouches[0].screenX;
+    });
+
+    container.addEventListener('touchend', (event) => {
+        touchendX = event.changedTouches[0].screenX;
+        deslizeProximo();
+    })
+
+    
+
+})
+
+
+
