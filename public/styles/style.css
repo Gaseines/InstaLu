@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'insta';
-    src: url(./fonts/Billabong.otf);
+    src: url(./public/fonts/Billabong.otf);
 }
 
 
@@ -11,12 +11,14 @@ body, html{
     margin: auto;
     background-color: black;
     max-width: 430px;
+    overflow-x: hidden;
     
 }
 
 #all{
     margin: auto;
     max-width: 430px;
+    padding-top: 10px;
 }
 
 header{

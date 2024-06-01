@@ -10,9 +10,10 @@ document.addEventListener('DOMContentLoaded', (event) =>{
 
     const nexts = document.querySelectorAll('.btnNext')
 
-//Do story 1 para o 2
+
     nexts.forEach(next => {
         next.addEventListener('click', () => {
+//Do story 1 para o 2
             if(next.classList.contains('next1')){
                 v1.classList.remove('aniNextAjuste')
                 v1.classList.add('aniNext')
@@ -23,15 +24,19 @@ document.addEventListener('DOMContentLoaded', (event) =>{
                     
                 }, 250)
 
+//Do story 2 para o 3               
+            }else if(next.classList.contains('next2')){
+                v2.classList.remove('aniNextAjuste')
+                v2.classList.add('aniNext')
+            
+                setTimeout(() => {
+                    window.location.href = '../pages/video03.html'
+                    v2.classList.remove('aniNext')
                 
-            }
-        })
-    })
+                }, 250)
 
-//Do story 2 para o 3
-    nexts.forEach(next => {
-        next.addEventListener('click', () => {
-            if(next.classList.contains('next2')){
+//Do story 3 para o 4             
+            }else if(next.classList.contains('next2')){
                 v2.classList.remove('aniNextAjuste')
                 v2.classList.add('aniNext')
             
@@ -46,6 +51,8 @@ document.addEventListener('DOMContentLoaded', (event) =>{
         })
     })
 
+
+
 })
 
 
@@ -56,14 +63,17 @@ document.addEventListener('DOMContentLoaded', (event) =>{
 
 
 document.addEventListener('DOMContentLoaded', (event) =>{
-    let v1 = document.querySelector(".storyVideo1")
     let v2 = document.querySelector(".storyVideo2")
+    let v3 = document.querySelector(".storyVideo3")
+    let v4 = document.querySelector(".storyVideo4")
+    
 
     const backs = document.querySelectorAll('.btnBack')
 
-//Do story 2 para o 1
+
     backs.forEach(back => {
         back.addEventListener('click', () => {
+//Do story 2 para o 1
             if(back.classList.contains('back2')){
                 v2.classList.remove('aniNextAjuste')
                 v2.classList.add('aniNext')
@@ -74,21 +84,25 @@ document.addEventListener('DOMContentLoaded', (event) =>{
                     
                 }, 250)
 
-                
-            }
-        })
-    })
-
-//Do story 3 para o 2
-    backs.forEach(back => {
-        back.addEventListener('click', () => {
-            if(back.classList.contains('back3')){
+//Do story 3 para o 2               
+            }else if(back.classList.contains('back3')){
                 v3.classList.remove('aniNextAjuste')
                 v3.classList.add('aniNext')
                 
                 setTimeout(() => {
                     window.location.href = '../pages/video02.html'
                     v3.classList.remove('aniNext')
+                    
+                }, 250)
+
+//Do story 4 para o 3                
+            }else if(back.classList.contains('back4')){
+                v4.classList.remove('aniNextAjuste')
+                v4.classList.add('aniNext')
+                
+                setTimeout(() => {
+                    window.location.href = '../pages/video03.html'
+                    v4.classList.remove('aniNext')
                     
                 }, 250)
 
@@ -137,13 +151,13 @@ if (touchendX < touchstartX) {
         setTimeout(() => {
             window.location.href = '../pages/video02.html';
         }, 250);
-    //Do story 2 para o 3
+//Do story 2 para o 3
     } else if (container.classList.contains('container_video2')) {
         container.classList.add('aniNext');
         setTimeout(() => {
             window.location.href = '../pages/video03.html';
         }, 250);
-    //Do story 3 para o 4 
+//Do story 3 para o 4 
     } else if (container.classList.contains('container_video3')) {
         container.classList.add('aniNext');
         setTimeout(() => {
@@ -153,19 +167,19 @@ if (touchendX < touchstartX) {
 
 //Voltando
 } else if (touchendX > touchstartX) {
-    //Do story 2 para o 1 
+//Do story 2 para o 1 
     if (container.classList.contains('container_video2')) {
         container.classList.add('aniNextAjuste');
         setTimeout(() => {
             window.location.href = '../pages/video01.html';
         }, 250);
-    //Do story 3 para o 2 
+//Do story 3 para o 2 
     } else if (container.classList.contains('container_video3')) {
         container.classList.add('aniNextAjuste');
         setTimeout(() => {
             window.location.href = '../pages/video02.html';
         }, 250);
-    //Do story 4 para o 3 
+//Do story 4 para o 3 
     } else if (container.classList.contains('container_video4')) {
         container.classList.add('aniNextAjuste');
         setTimeout(() => {
@@ -178,7 +192,6 @@ if (touchendX < touchstartX) {
 
 //Eventos Passar
 
-//Story 01
     container.addEventListener('touchstart', (event) => {
         touchstartX = event.changedTouches[0].screenX;
     });
