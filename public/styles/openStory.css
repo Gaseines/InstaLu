@@ -59,6 +59,27 @@ body, html {
     z-index: 2;
 }
 
+.loadC3 {
+    content: '';
+    width: 0%;
+    height: 1.5px;
+    background-color: rgb(175, 175, 175);
+    position: absolute;
+    animation: load 15s linear forwards;
+    z-index: 2;
+}
+
+.loadC4 {
+    content: '';
+    width: 0%;
+    height: 1.5px;
+    background-color: rgb(175, 175, 175);
+    position: absolute;
+    animation: load 43s linear forwards;
+    z-index: 2;
+}
+
+/*-------------------------------------------------------------------------------*/
 
 .bordaImg {
     display: flex;
