@@ -65,7 +65,7 @@ body, html {
     height: 1.5px;
     background-color: rgb(175, 175, 175);
     position: absolute;
-    animation: load 15s linear forwards;
+    animation: load 13s linear forwards;
     z-index: 2;
 }
 
@@ -75,7 +75,7 @@ body, html {
     height: 1.5px;
     background-color: rgb(175, 175, 175);
     position: absolute;
-    animation: load 42s linear forwards;
+    animation: load 42.5s linear forwards;
     z-index: 2;
 }
 
