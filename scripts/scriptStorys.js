@@ -1,3 +1,5 @@
+
+//Passa sozinho os Story
 function addEndedEventListener(video, nextPage) {
     if (video) {
         video.addEventListener('ended', () => {
@@ -38,3 +40,10 @@ videoSelectors.forEach(videoObj => {
     let video = document.querySelector(videoObj.selector);
     addEndedEventListener(video, videoObj.nextPage);
 });
+
+
+//Barrinha de Load de cada Vídeo
+
+const barrinha1 = document.querySelector('#loadC1')
+
+

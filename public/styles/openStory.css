@@ -75,7 +75,7 @@ body, html {
     height: 1.5px;
     background-color: rgb(175, 175, 175);
     position: absolute;
-    animation: load 43s linear forwards;
+    animation: load 42s linear forwards;
     z-index: 2;
 }
 
@@ -96,7 +96,7 @@ body, html {
     object-fit: cover; /* Garante que o vídeo cobre toda a área */
     position: absolute;
     z-index: 1;
-    background-color: wheat;
+    background-color: black;
 
     right: 0;
     left: 0%;

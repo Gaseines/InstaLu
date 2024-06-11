@@ -123,6 +123,38 @@ header{
     margin: 5px 0px 5px 0px;
 }
 
+.feedVideo{
+    position: relative;
+}
+
+.play{
+    
+
+    position: absolute;
+    top: 45%;
+    right: 36%;
+}
+
+.mute{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 94%;
+    left: 90%;
+}
+
+.img_mute{
+    width: 18px;
+    height: 18px;
+}
+
 .iconesPostContainer{
     display: flex;
     width: 100%;
