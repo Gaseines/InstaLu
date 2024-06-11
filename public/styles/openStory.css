@@ -25,6 +25,7 @@ body, html {
     flex-direction: column;
     color: white;
     max-width: 430px;
+    
 }
 
 /* Estiliza a barra de carregamento */

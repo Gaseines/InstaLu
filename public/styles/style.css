@@ -15,10 +15,14 @@ body, html{
     
 }
 
+.principal{
+    padding-top: 10px;
+}
+
 #all{
     margin: auto;
     max-width: 430px;
-    padding-top: 10px;
+    
 }
 
 header{
