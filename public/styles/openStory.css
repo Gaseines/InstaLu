@@ -85,7 +85,7 @@ body, html {
     height: 1.5px;
     background-color: rgb(175, 175, 175);
     position: absolute;
-    animation: load 42.5s linear forwards;
+    animation: load 46.5s linear forwards;
     z-index: 2;
 }
 
