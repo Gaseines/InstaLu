@@ -99,9 +99,25 @@ body, html {
     z-index: 2;
 }
 
+.loadC8 {
+    content: '';
+    width: 0%;
+    height: 1.5px;
+    background-color: rgb(175, 175, 175);
+    position: absolute;
+    animation: load 59.5s linear forwards;
+    z-index: 2;
+}
 
-
-
+.loadC9 {
+    content: '';
+    width: 0%;
+    height: 1.5px;
+    background-color: rgb(175, 175, 175);
+    position: absolute;
+    animation: load 34.5s linear forwards;
+    z-index: 2;
+}
 
 .loadC10 {
     content: '';
