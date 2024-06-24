@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let v17 = document.querySelector(".storyVideo17");
     let v18 = document.querySelector(".storyVideo18");
     let v19 = document.querySelector(".storyVideo19");
+    
 
 
     const nexts = document.querySelectorAll('.btnNext')
@@ -209,6 +210,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         window.location.href = '../pages/video19.html';
                         v18.classList.remove('aniNext');
                     }, 250);
+
+                    // Do story 19 para o 20
+                } else if (next.classList.contains('next19')) {
+                    v19.classList.remove('aniNextAjuste');
+                    v19.classList.add('aniNext');
+
+                    setTimeout(() => {
+                        window.location.href = '../pages/video20.html';
+                        v19.classList.remove('aniNext');
+                    }, 250);
                 }
             });
         });
@@ -246,6 +257,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let v17 = document.querySelector(".storyVideo17");
     let v18 = document.querySelector(".storyVideo18");
     let v19 = document.querySelector(".storyVideo19");
+    let v20 = document.querySelector(".storyVideo20");
 
 
 
@@ -433,6 +445,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     window.location.href = '../pages/video18.html';
                     v19.classList.remove('aniNext');
                 }, 250);
+
+                // Do story 20 para o 19
+            } else if (back.classList.contains('back20')) {
+                v20.classList.remove('aniNextAjuste');
+                v20.classList.add('aniNext');
+
+                setTimeout(() => {
+                    window.location.href = '../pages/video19.html';
+                    v20.classList.remove('aniNext');
+                }, 250);
             }
         });
     });
@@ -468,7 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //Passando  
         if (touchendX < touchstartX) {
             // Verifica e redireciona para o próximo story
-            for (let i = 1; i < 19; i++) {
+            for (let i = 1; i < 20; i++) {
                 if (container.classList.contains(`container_video${i}`)) {
                     container.classList.add('aniNext');
                     setTimeout(() => {
@@ -479,7 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else if (touchendX > touchstartX) {
             // Verifica e redireciona para o story anterior
-            for (let i = 2; i <= 19; i++) {
+            for (let i = 2; i <= 20; i++) {
                 if (container.classList.contains(`container_video${i}`)) {
                     container.classList.add('aniNextAjuste');
                     setTimeout(() => {

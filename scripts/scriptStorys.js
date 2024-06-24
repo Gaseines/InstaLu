@@ -310,4 +310,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Vídeo 20
+    const barrinha20 = document.querySelector('#loadC20');
+    const video20 = document.querySelector('.storyVideo20');
+
+    video19.addEventListener('play', () => {
+        barrinha19.classList.add('loadC20');
+
+        if (video20.ended) {
+            barrinha20.classList.add('loadC20');
+        }
+    });
+});
+
 

@@ -289,6 +289,21 @@ v19.addEventListener('click', () => {
     }, 800)
 })
 
+// Abertura Story 20
+v20.addEventListener('click', () => {
+    let black = document.querySelector('#black20')
+
+    black.classList.add('black_box_open')
+
+    setTimeout(() => {
+        window.location.href = './pages/video20.html'
+    }, 170)
+
+    setTimeout(() => {
+        black.classList.remove('black_box_open')
+    }, 800)
+})
+
 
 
 
