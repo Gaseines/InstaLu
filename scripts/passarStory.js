@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let v17 = document.querySelector(".storyVideo17");
     let v18 = document.querySelector(".storyVideo18");
     let v19 = document.querySelector(".storyVideo19");
+    let v20 = document.querySelector(".storyVideo20");
     
 
 
@@ -218,6 +219,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
                     setTimeout(() => {
                         window.location.href = '../pages/video20.html';
+                        v19.classList.remove('aniNext');
+                    }, 250);
+
+                    //Do story 20 para Home
+                } else if (next.classList.contains('next20')) {
+                    v20.classList.remove('aniNextAjuste');
+                    v20.classList.add('aniNext');
+
+                    setTimeout(() => {
+                        window.location.href = '../index.html';
                         v19.classList.remove('aniNext');
                     }, 250);
                 }

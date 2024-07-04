@@ -33,7 +33,8 @@ let videoSelectors = [
     { selector: ".storyVideo16", nextPage: "../pages/video17.html" },
     { selector: ".storyVideo17", nextPage: "../pages/video18.html" },
     { selector: ".storyVideo18", nextPage: "../pages/video19.html" },
-    { selector: ".storyVideo19", nextPage: "../index.html" }
+    { selector: ".storyVideo19", nextPage: "../pages/video20.html" },
+    { selector: ".storyVideo20", nextPage: "../index.html" }
 ];
 
 videoSelectors.forEach(videoObj => {

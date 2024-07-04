@@ -169,6 +169,16 @@ body, html {
     z-index: 2;
 }
 
+.loadC14 {
+    content: '';
+    width: 0%;
+    height: 1.5px;
+    background-color: rgb(175, 175, 175);
+    position: absolute;
+    animation: load 59.5s linear forwards;
+    z-index: 2;
+}
+
 .loadC15 {
     content: '';
     width: 0%;
@@ -196,6 +206,16 @@ body, html {
     background-color: rgb(175, 175, 175);
     position: absolute;
     animation: load 27.5s linear forwards;
+    z-index: 2;
+}
+
+.loadC19 {
+    content: '';
+    width: 0%;
+    height: 1.5px;
+    background-color: rgb(175, 175, 175);
+    position: absolute;
+    animation: load 37.5s linear forwards;
     z-index: 2;
 }
 
